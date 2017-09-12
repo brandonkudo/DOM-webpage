@@ -31,4 +31,15 @@ $(document).ready(function() {
       $(this).remove();
     });
   });
+
+  $("button#red").click(function() {
+    $("ul#USE").prepend("<li>Hello Red</li>");
+    $("ul#WEB").prepend("<li>NO IM GREEN</li>");
+    $("ul#USE").children("li").first().click(function() {
+      alert('Youre colorblind');
+    });
+    $("ul#WEB").children("li").first().click(function() {
+      alert('Youre colorblind');
+    });
+  });
 });
